@@ -1,0 +1,37 @@
+buildscript {
+    repositories {
+        maven {
+            url "http://s3.qbuild.corp.qihoo.net:8360/nexus/content/groups/qbuild/"
+        }
+
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+
+
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url "http://s3.qbuild.corp.qihoo.net:8360/nexus/content/groups/qbuild/"
+        }
+
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
