@@ -1,17 +1,17 @@
-# QLocation
-Android Q定位权限变更验证
+# Android Q定位权限变更验证
 
-## Android Q以前的定位权限只有：
+
+### Android Q以前的定位权限只有：
 
 ACCESS_FINE_LOCATION 和 ACCESS_COARSE_LOCATION
 
-## Android Q新增了：
+### Android Q新增了：
 
 ACCESS_BACKGROUND_LOCATION
 
 针对前台服:foregroundServiceType=“location”
 
-## 注意事项
+### 注意事项
 
 GPS只能室外进行测试；
 
