@@ -1,14 +1,12 @@
 package com.akathink.qlocation;
 
 import android.content.Intent;
-import android.location.Location;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.akathink.qlocation.utils.LocationTool;
+import com.akathink.qlocation.utils.WifiManagerHelper;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
@@ -62,26 +60,5 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "关闭WiFi-->> " + wifiManagerHelper.setWifiClose(), Toast.LENGTH_SHORT).show();
             }
         });
-    }
-
-
-    private void whenOnBackground() {
-        while (true) {
-
-            Location location = LocationTool.getLocation(MainActivity.this);
-
-            if (location != null) {
-                Log.d(TAG, "当前位置：\n 经度-->" + location.getLatitude() + "\n 维度-->" + location.getLongitude());
-            } else {
-                Log.d(TAG, "没有后台定位权限，获取失败");
-            }
-
-
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
     }
 }
