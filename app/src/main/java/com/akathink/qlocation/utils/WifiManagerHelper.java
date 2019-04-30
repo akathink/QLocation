@@ -1,6 +1,5 @@
-package com.akathink.qlocation;
+package com.akathink.qlocation.utils;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
